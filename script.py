@@ -62,7 +62,7 @@ headers = {"Authorization": f"Bearer {twitter_bearer_token}"}
 url = "https://api.twitter.com/2/users/by/username/"
 
 # Google Drive から Twitter アカウントリスト取得
-file_id = get_file_id("summer_anime1.csv")
+file_id = get_file_id("summer_anime2.csv")
 if file_id:
     df = retry_request(lambda: pd.read_csv(f"https://drive.google.com/uc?id={file_id}"))
     print("Twitterアカウントリストを取得しました")
